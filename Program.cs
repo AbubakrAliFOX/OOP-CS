@@ -2,26 +2,31 @@
 
 class clsPerson
 {
-    protected string firstName;
-    private string lastName;
+    private string _firstName;
+    private string _lastName;
+
+    public string FirstName
+    {
+        get
+        { return _firstName; }
+
+        set { _firstName = value; }
+    }
+
+    public string LastName
+    {
+        get { return _lastName;}
+        set { _lastName = value; }  
+    }
 
     public string fullName ()
     {
-        return firstName + " " + lastName;
+        return FirstName + " " + LastName;
     }
 
     public void writeFullName ()
     {
         Console.WriteLine(fullName());
-    }
-}
-
-class clsEmployee : clsPerson
-{
-    public void writeFullName()
-    {
-
-        Console.WriteLine(firstName);
     }
 }
 
@@ -32,10 +37,9 @@ namespace MyApp
         static void Main(string[] args)
         {
             clsPerson Person1 = new clsPerson();
-            clsEmployee Employee1 = new clsEmployee();
-            Employee1.
+            Person1.FirstName = "Ahmad";
+            Person1.LastName = "Ali";
             Person1.writeFullName();
-            Person1.
         }
     }
 }
