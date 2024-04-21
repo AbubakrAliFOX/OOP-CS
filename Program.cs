@@ -1,27 +1,69 @@
 ﻿using System;
 
-class clsPerson
+class clsCalculator
 {
-    public string FirstName
+    private float Result
     {
         get;
         set;
     }
 
-    public string LastName
+    private string LastOp
     {
         get;
         set;
     }
 
-    public string fullName ()
+    private float LastNumber
     {
-        return FirstName + " " + LastName;
+        get;
+        set;
     }
 
-    public void writeFullName ()
+    public void Add(float Number)
     {
-        Console.WriteLine(fullName());
+        Result += Number;
+        LastOp = "adding";
+        LastNumber = Number;
+    }
+
+    public void Subtract(float Number)
+    {
+        Result -= Number;
+        LastOp = "subtracting";
+        LastNumber = Number;
+
+    }
+
+    public void Divide(float Number)
+    {
+        if (Result == 0)
+        {
+            Result = 1;
+        }
+
+        Result /= Number;
+        LastOp = "dividing";
+        LastNumber = Number;
+
+    }
+
+
+    public void Multiply(float Number)
+    {
+        Result *= Number;
+        LastOp = "multiplying";
+        LastNumber = Number;
+
+    }
+
+    public void Clear()
+    {
+        Result = 0;
+    }
+    public void PrintResult()
+    {
+        Console.WriteLine($"Result after {LastOp} {LastNumber} is: {Result}");
     }
 }
 
@@ -31,10 +73,16 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            clsPerson Person1 = new clsPerson();
-            Person1.FirstName = "Ahmad";
-            Person1.LastName = "Ali";
-            Person1.writeFullName();
+            clsCalculator Calc1 = new clsCalculator();
+            Calc1.Add(10);
+            Calc1.PrintResult();
+            Calc1.Subtract(10);
+            Calc1.PrintResult();
+            Calc1.Add(30);
+            Calc1.PrintResult();
+            Calc1.Divide(10);
+            Calc1.Multiply(9);
+            Calc1.PrintResult();
         }
     }
 }
