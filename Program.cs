@@ -2,8 +2,8 @@
 
 class clsPerson
 {
-    public string firstName;
-    public string lastName;
+    protected string firstName;
+    private string lastName;
 
     public string fullName ()
     {
@@ -16,7 +16,14 @@ class clsPerson
     }
 }
 
+class clsEmployee : clsPerson
+{
+    public void writeFullName()
+    {
 
+        Console.WriteLine(firstName);
+    }
+}
 
 namespace MyApp
 {
@@ -24,7 +31,11 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-
+            clsPerson Person1 = new clsPerson();
+            clsEmployee Employee1 = new clsEmployee();
+            Employee1.
+            Person1.writeFullName();
+            Person1.
         }
     }
 }
