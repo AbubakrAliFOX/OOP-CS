@@ -1,0 +1,14 @@
+E:\Downloads\WebDev\Demos\C# OOP\bin\Debug\net8.0\C# OOP.exe
+E:\Downloads\WebDev\Demos\C# OOP\bin\Debug\net8.0\C# OOP.deps.json
+E:\Downloads\WebDev\Demos\C# OOP\bin\Debug\net8.0\C# OOP.runtimeconfig.json
+E:\Downloads\WebDev\Demos\C# OOP\bin\Debug\net8.0\C# OOP.dll
+E:\Downloads\WebDev\Demos\C# OOP\bin\Debug\net8.0\C# OOP.pdb
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\C# OOP.GeneratedMSBuildEditorConfig.editorconfig
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\C# OOP.AssemblyInfoInputs.cache
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\C# OOP.AssemblyInfo.cs
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\C# OOP.csproj.CoreCompileInputs.cache
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\C# OOP.dll
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\refint\C# OOP.dll
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\C# OOP.pdb
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\C# OOP.genruntimeconfig.cache
+E:\Downloads\WebDev\Demos\C# OOP\obj\Debug\net8.0\ref\C# OOP.dll
