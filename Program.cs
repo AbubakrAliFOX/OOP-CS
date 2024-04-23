@@ -1,70 +1,35 @@
 ﻿using System;
+using System.Xml.Linq;
 
-class clsCalculator
+
+public class clsPerson
 {
-    private float Result
+    public int Id { get; set; }
+    public string Name { get; set; }
+    public string Description { get; set; }
+    public int Age { get; set; }
+
+    public clsPerson(int id, string name, string description, int age)
     {
-        get;
-        set;
+        this.Id = id;
+        this.Name = name;
+        this.Description = description;
+        this.Age = age;
+    }
+}
+
+public class clsEmployee : clsPerson
+{
+    public string Department { get; set; }
+    public float Salary { get; set; }
+
+    public clsEmployee (int id, string name, string description, int age, string department, float salary) 
+            : base(id, name, description, age)
+    {
+        this.Department = department;
+        this.Salary = salary;
     }
 
-    private string LastOp
-    {
-        get;
-        set;
-    }
-
-    private float LastNumber
-    {
-        get;
-        set;
-    }
-
-    public void Add(float Number)
-    {
-        Result += Number;
-        LastOp = "adding";
-        LastNumber = Number;
-    }
-
-    public void Subtract(float Number)
-    {
-        Result -= Number;
-        LastOp = "subtracting";
-        LastNumber = Number;
-
-    }
-
-    public void Divide(float Number)
-    {
-        if (Result == 0)
-        {
-            Result = 1;
-        }
-
-        Result /= Number;
-        LastOp = "dividing";
-        LastNumber = Number;
-
-    }
-
-
-    public void Multiply(float Number)
-    {
-        Result *= Number;
-        LastOp = "multiplying";
-        LastNumber = Number;
-
-    }
-
-    public void Clear()
-    {
-        Result = 0;
-    }
-    public void PrintResult()
-    {
-        Console.WriteLine($"Result after {LastOp} {LastNumber} is: {Result}");
-    }
 }
 
 namespace MyApp
@@ -73,16 +38,7 @@ namespace MyApp
     {
         static void Main(string[] args)
         {
-            clsCalculator Calc1 = new clsCalculator();
-            Calc1.Add(10);
-            Calc1.PrintResult();
-            Calc1.Subtract(10);
-            Calc1.PrintResult();
-            Calc1.Add(30);
-            Calc1.PrintResult();
-            Calc1.Divide(10);
-            Calc1.Multiply(9);
-            Calc1.PrintResult();
+            
         }
     }
 }
